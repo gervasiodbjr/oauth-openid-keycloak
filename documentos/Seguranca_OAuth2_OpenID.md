@@ -37,6 +37,6 @@ Uma de suas principais características está a capacidade de centralizar atrav�
 
 ![IMG<span data-type=](media/fluxo3.png)
 
-4. O Cliente é um Aplicativo de Página Única (SPA - Single Page Application) [[Projeto 04](../oauth2-fluxo1)]
+4. O Cliente é um Aplicativo de Página Única (SPA - Single Page Application) [[Projeto 04 (obs. Parcial)](../oauth2-fluxo1)]
 
 ![IMG<span data-type=](media/fluxo4.png)
