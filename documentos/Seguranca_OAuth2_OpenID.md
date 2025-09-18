@@ -26,6 +26,17 @@ Uma de suas principais características está a capacidade de centralizar atrav�
 ### Flúxos de Autorização OAuth2
 
 1. O Cliente é o Proprietário do Recurso [[Projeto 01](../oauth2-fluxo1)]
+
+![IMG<span data-type=](media/fluxo1.png)
+
 2. O Cliente é um aplicativo da web em execução no servidor [[Projeto 02](../oauth2-fluxo2)]
+
+![IMG<span data-type=](media/fluxo2.png)
+
 3. O Cliente é absolutamente confiável com as credenciais do usuário [[Projeto 03](../oauth2-fluxo3)]
+
+![IMG<span data-type=](media/fluxo3.png)
+
 4. O Cliente é um Aplicativo de Página Única (SPA - Single Page Application) [[Projeto 04](../oauth2-fluxo1)]
+
+![IMG<span data-type=](media/fluxo4.png)
