@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Fragmentos</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <div th:fragment="navbar" style="color:blue; font-family: Arial, sans-serif; font-size:24px; font-weight:bold; display: flex; justify-content: center; align-items: center; height: 200px;">
+        <a th:href="@{/}" title="Página inicial">Home</a>&ensp;|&ensp;
+        <a th:href="@{/user}" title="Área do Usuário">Área do Usuário</a>&ensp;|&ensp;
+        <a th:href="@{/admin}" title="Painel Administrativo">Área Administrativa</a>&ensp;|&ensp;
+        <a th:href="@{/logout}" title="Logout">Logout</a>
+    </div>
+</body>
+</html>

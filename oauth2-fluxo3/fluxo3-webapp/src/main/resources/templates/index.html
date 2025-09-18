@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <style>
+        div.body {
+            color: blue;
+            font-family: Arial, sans-serif;
+            font-size: 34px;
+            font-weight: bold;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 20vh;
+        }
+    </style>
+</head>
+<body>
+    <div th:replace="fragments :: navbar"></div>
+    <div class="body">Home Page</div>
+</body>
+</html>

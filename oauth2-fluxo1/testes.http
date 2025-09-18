@@ -1,0 +1,8 @@
+
+### GET Rest Server Not Authorized Getting Token Info [ HTTP/1.1 401 - Unauthorized ]
+GET /info/token 
+Host: localhost:9000
+
+### GET Rest Client Getting Token Info From Rest Server [ HTTP/1.1 200 - OK ]
+GET /client/info/token
+Host: localhost:9001

@@ -1,0 +1,38 @@
+version: '3.8'
+
+services:
+  keycloak03:
+    image: quay.io/keycloak/keycloak:latest
+    container_name: keycloak03
+    hostname: keycloak03
+    environment:
+      KC_DB: postgres
+      KC_DB_URL: jdbc:postgresql://postgres03:5432/keycloak
+      KC_DB_USERNAME: admin
+      KC_DB_PASSWORD: xpto
+      KC_HOSTNAME_PORT: 8080
+      KC_LOG_LEVEL: info
+      KEYCLOAK_ADMIN: admin
+      KEYCLOAK_ADMIN_PASSWORD: xpto
+    command:
+      - start-dev
+      - --import-realm
+    ports:
+      - 8080:8080
+    depends_on:
+      - postgres03
+    volumes:
+      - ./project-realm.json:/opt/keycloak/data/import/realm.json
+
+  postgres03:
+    image: postgres:15
+    container_name: postgres03
+    hostname: postgres03
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_DB: keycloak
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: xpto
+    #volumes:
+      #- postgres_data:/var/lib/postgresql/data

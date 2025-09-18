@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Login</title>
+    <style>
+        /* Estilo para centralização e aparência do formulário */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 60vh; /* Ocupa toda a altura da janela */
+            margin: 0; /* Remove margens padrão do body */
+            background-color: #f0f0f0; /* Fundo claro para destaque do formulário */
+        }
+        .login-container {
+            font-size: 24px;
+            font-family: Arial, sans-serif;
+            width: 400px;
+            padding: 20px;
+            border: 1px solid #ccc; /* Moldura ao redor do formulário */
+            border-radius: 10px; /* Borda com cantos arredondados */
+            background-color: #ffffff; /* Fundo branco do formulário */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para um efeito elevado */
+        }
+        h1 {
+            text-align: center;
+            font-size: 32px;
+            color: #333;
+        }
+        form div {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            font-size: 14px;
+            color: #555;
+        }
+        input {
+            width: 380px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            color: #fff;
+            background-color: #007BFF;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        p {
+            margin: 0;
+            text-align: center;
+            font-size: 14px;
+        }
+        .error {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h1>Login</h1>
+        <form th:action="@{/login}" method="post">
+            <div>
+                <label>Username:</label>
+                <input type="text" name="username"/>
+            </div>
+            <div>
+                <label>Password:</label>
+                <input type="password" name="password"/>
+            </div>
+            <div>
+                <button type="submit">Login</button>
+            </div>
+        </form>
+        <div th:if="${param.error}">
+            <p style="color:red;">Invalid username or password.</p>
+        </div>
+        <div th:if="${param.logout}">
+            <p>You have been logged out.</p>
+        </div>
+    </div>
+</body>
+</html>

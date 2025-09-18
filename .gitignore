@@ -1,0 +1,65 @@
+# ---- General OS ----
+.DS_Store
+Thumbs.db
+
+# ---- Logs ----
+*.log
+logs/
+
+# ---- Environment files ----
+.env
+.env.*
+
+# ---- Maven / Java ----
+/target/
+**/target/
+!.mvn/wrapper/maven-wrapper.jar
+.mvn/timing.properties
+.settings/
+.project
+.classpath
+
+# ---- Gradle (in case of samples) ----
+.gradle/
+**/build/
+
+# ---- IntelliJ IDEA ----
+.idea/
+*.iml
+*.ipr
+*.iws
+out/
+
+# ---- VS Code ----
+.vscode/
+
+# ---- Node / Angular ----
+node_modules/
+**/node_modules/
+dist/
+**/dist/
+.angular/
+.angular/cache/
+coverage/
+**/coverage/
+# Angular environment files
+src/environments/environment*.ts
+
+# ---- Package managers ----
+package-lock.json
+pnpm-lock.yaml
+yarn.lock
+
+# ---- Misc build artifacts ----
+.tmp/
+.temp/
+.cache/
+**/.cache/
+
+# ---- Docker (local volumes, if any) ----
+**/docker/**/data/
+**/docker/**/volumes/
+
+# ---- HTTP Client scratch files ----
+*.httpResponse
+*.requests
